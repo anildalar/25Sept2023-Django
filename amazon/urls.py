@@ -22,6 +22,7 @@ def test_view(request,*args, **kwargs):
     return HttpResponse("<h1>Hello World</h1>")
 
 urlpatterns = [
+    path('', test_view, name='test_view' ),
     path('test/', test_view, name='test_view' ),
     path('admin/', admin.site.urls),
 ]
